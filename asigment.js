@@ -9,11 +9,10 @@ let car = {
     color: `black`,
 
     start: function(){
-        console.log(`The car has tarted`)
+        console.log(`The car has started`)
     }
 }
-
-console.log(car.start())
+car.start()
 
 
 // Question 2
@@ -64,6 +63,11 @@ class Person {
     introduce(){
         console.log(`Hi, I'm ${this.name} and I am ${this.age} years old.`)
     }
+
+    birthday(){
+        this.age++
+        console.log(`This is my new age ${this.age}`)
+    }
 }
 
 let person1 = new Person ("Chris", 23)
@@ -71,4 +75,7 @@ let person2 = new Person ("Juan", 19)
 
 person1.introduce();
 person2.introduce();
+person1.birthday();
+person2.birthday();
+
 
