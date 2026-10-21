@@ -49,7 +49,26 @@ let student = {
 }
 student.printInfo()
 
-// Question 4
-let laptop = `{"type" = "Laptop", "model" = "MacBook"}`
+// // Question 4
+// let laptop = `{"type" = "Laptop", "model" = "MacBook"}`
 
-JSON.parse(laptop)
+// JSON.parse(laptop)
+
+
+// Question 5
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    introduce(){
+        console.log(`Hi, I'm ${this.name} and I am ${this.age} years old.`)
+    }
+}
+
+let person1 = new Person ("Chris", 23)
+let person2 = new Person ("Juan", 19)
+
+person1.introduce();
+person2.introduce();
+
