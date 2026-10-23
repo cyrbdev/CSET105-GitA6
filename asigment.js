@@ -49,9 +49,12 @@ let student = {
 student.printInfo()
 
 // // Question 4
-// let laptop = `{"type" = "Laptop", "model" = "MacBook"}`
+let laptop = '{"type": "Laptop", "model": "MacBook"}';
+let laptopObj = JSON.parse(laptop);
 
-// JSON.parse(laptop)
+laptopObj.price = 1200;
+let newLaptop = JSON.stringify(laptopObj);
+console.log(newLaptop);
 
 
 // Question 5
@@ -78,4 +81,42 @@ person2.introduce();
 person1.birthday();
 person2.birthday();
 
+// Question 6
+class BankAccount {
+    constructor(owner, balance){
+        this.owner = owner;
+        this.balance = balance
+    }
+    deposit(amount){
+        this.balance+=amount;
+    }
+    withdraw(amount) {
+        this.balance -= amount; 
+    }
+     displayBalance() {
+        console.log(`Your balance is $${this.balance}`);
+    }
+}
 
+let person3 = new BankAccount ("Christian", 500)
+person3.deposit(300)
+person3.displayBalance()
+person3.withdraw(300)
+person3.displayBalance()
+
+// Question 7
+class Animal {
+    constructor(name, sound) {
+        this.name = name;
+        this.sound = sound;
+    }
+    makeSound() {
+        console.log(`${this.name} says ${this.sound}`);
+    }
+}
+let dog = new Animal("dog", "woooooooof");
+let cat = new Animal("cat", "Meooooooooow");
+let dog1 = new Animal("dog", "Hey bro");
+dog.makeSound();
+cat.makeSound();
+dog1.makeSound();
