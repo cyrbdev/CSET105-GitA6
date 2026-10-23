@@ -48,7 +48,7 @@ let student = {
 }
 student.printInfo()
 
-// // Question 4
+// Question 4
 let laptop = '{"type": "Laptop", "model": "MacBook"}';
 let laptopObj = JSON.parse(laptop);
 
